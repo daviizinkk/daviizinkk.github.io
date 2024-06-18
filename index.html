@@ -142,5 +142,19 @@
             sectionToShow.classList.add('animate__animated', 'animate__fadeIn');
         }
     </script>
+
+    <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+        function getIP(json) {
+            console.log('Seu IP é ' + json.ip);
+        }
+    </script>
+    <script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+
 </body>
 </html>
