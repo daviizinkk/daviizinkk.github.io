@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daviizinkk's Hub</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&family=Lora:wght@400;700&family=Nunito:wght@700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        /* Main background */
+        body {  
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+            font-family: 'Open Sans', sans-serif;
+        }
+        header {
+            background-color: #ffffff;
+            color: #333;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        header h1 {
+            font-family: 'Nunito', sans-serif; /* Alternativa similar à Cocogoose */
+            font-size: 2.5em;
+            animation: colorChange 10s infinite alternate;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #eeeeee;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: #333;
+            padding: 15px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+            font-family: 'Roboto', sans-serif;
+        }
+        nav a:hover {
+            background-color: #dddddd;
+            transform: scale(1.1);
+        }
+        .container {
+            padding: 20px;
+        }
+        .project, .about {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s;
+        }
+        .project h2, .about h2 {
+            font-family: 'Lora', serif;
+            font-size: 2em;
+            animation: slideIn 1s;
+        }
+        .project p, .about p {
+            font-family: 'Open Sans', sans-serif;
+        }
+        footer {
+            background-color: #ffffff;
+            color: #333;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+            font-family: 'Roboto', sans-serif;
+        }
+        .github-link {
+            color: #007BFF;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .github-link:hover {
+            color: #0056b3;
+        }
+        .hidden {
+            display: none;
+        }
+        @keyframes colorChange {
+            0% { color: #333; }
+            100% { color: #007BFF; }
+        }
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="animate__animated animate__bounceIn">Daviizinkk's Hub</h1>
+    </header>
+    <nav>
+        <a href="#" onclick="showSection('projeto')">Projeto</a>
+        <a href="#" onclick="showSection('sobre-mim')">Sobre Mim</a>
+    </nav>
+    <div class="container">
+        <section id="projeto" class="project">
+            <h2>Projeto: Parkour Side</h2>
+            <p>Bem-vindo ao Parkour Side! Este projeto é uma aplicação inovadora que permite aos usuários explorar e praticar parkour em um ambiente virtual, o Roblox. A ideia é proporcionar uma experiência imersiva e educativa para entusiastas de parkour de todos os níveis.</p>
+            <p>Funcionalidades principais:</p>
+            <ul>
+                <li>Mapas 3D interativos</li>
+                <li>Tutoriais e desafios</li>
+                <li>Comunidade online para compartilhamento de dicas e truques</li>
+                <li>Modo de treinamento com feedback em tempo real</li>
+            </ul>
+            <p>Estamos continuamente trabalhando para melhorar e expandir o Parkour Side, então fique atento para atualizações e novos recursos!</p>
+        </section>
+        <section id="sobre-mim" class="about hidden">
+            <h2>Sobre Mim</h2>
+            <p>Olá! Meu nome é Davi. Eu tenho 12 anos. Sou um desenvolvedor apaixonado por tecnologia e inovação. Tenho experiência em desenvolvimento de software, design de jogos e realidade virtual. Quando não estou programando, gosto de praticar parkour, explorar novas tecnologias e compartilhar conhecimento com a comunidade.</p>
+        </section>
+    </div>
+    <footer>
+        <p>Conecte-se comigo no <a href="https://github.com/daviizinkk" class="github-link">GitHub</a></p>
+    </footer>
+    <script>
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('.container section');
+            sections.forEach(function(section) {
+                section.classList.add('hidden');
+                section.classList.remove('animate__animated', 'animate__fadeIn');
+            });
+            var sectionToShow = document.getElementById(sectionId);
+            sectionToShow.classList.remove('hidden');
+            sectionToShow.classList.add('animate__animated', 'animate__fadeIn');
+        }
+    </script>
+</body>
+</html>
